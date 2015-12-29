@@ -36,6 +36,8 @@ public class WebAppInstallator {
 			}
 			if (this.extractWar(cl.getOptionValue("dst"), forceInstall)) {
 				logger.info("Application installed successfully in " + cl.getOptionValue("dst"));
+			} else {
+				logger.info("Application installation failed!");
 			}
 		}
 	}
@@ -47,6 +49,7 @@ public class WebAppInstallator {
 			logger.info(optionInfoStringBuilder.append("Name : ").append(option.getOpt()).append(" ,")
 					.append(option.getDescription()).append(" Is required :  ").append(option.isRequired()).toString());
 		});
+		logger.info("Example : java -jar sampleAppInstallator.jar -dst sampleAppDirectory");
 	}
 
 	private boolean extractWar(String destinationPath, boolean forceInstall) {
@@ -79,7 +82,8 @@ public class WebAppInstallator {
 						JarEntry file = enumEntries.nextElement();
 						logger.info(file.getName());
 						File f = new File(destinationPath + java.io.File.separator + file.getName());
-						f.getParentFile().mkdirs();	//make parent folders if necessary 
+						f.getParentFile().mkdirs(); // make parent folders if
+													// necessary
 						if (!file.isDirectory()) {
 							try (InputStream is = targetWar.getInputStream(file);
 									FileOutputStream fos = new FileOutputStream(f)) {
