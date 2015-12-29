@@ -1,14 +1,1 @@
-09:30:49.077 [main] DEBUG : E:\DeployWebApp\
-09:30:49.109 [main] INFO  : META-INF/
-09:30:49.111 [main] INFO  : META-INF/MANIFEST.MF
-09:30:49.114 [main] INFO  : WEB-INF/
-09:30:49.115 [main] INFO  : WEB-INF/classes/
-09:30:49.116 [main] INFO  : WEB-INF/classes/mypackage/
-09:30:49.117 [main] INFO  : WEB-INF/lib/
-09:30:49.119 [main] INFO  : images/
-09:30:49.120 [main] INFO  : WEB-INF/classes/mypackage/Hello.class
-09:30:49.139 [main] INFO  : WEB-INF/web.xml
-09:30:49.153 [main] INFO  : hello.jsp
-09:30:49.159 [main] INFO  : images/tomcat.gif
-09:30:49.176 [main] INFO  : index.html
-09:30:49.190 [main] INFO  : Application installed successfully in E:\DeployWebApp\
+10:23:00.210 [main] DEBUG : E:/WebApp/

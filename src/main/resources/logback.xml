@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-
-	<!-- Send debug messages to System.out -->
 	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
 			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level : %msg%n</pattern>
 		</encoder>
 	</appender>
-
 	<logger name="webappinstalator.WebAppInstallator"
 		level="INFO" additivity="false">
-		<appender-ref ref="STDOUT" />
-	</logger>
-	<appender name="file" class="ch.qos.logback.core.FileAppender">
-		<file>WebAppInstallerReport.txt</file>
-		<append>false</append>
-		<encoder>
-			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level : %msg%n
-			</pattern>
-		</encoder>
-	</appender>
-
-	<root level="DEBUG">
 		<appender-ref ref="console" />
-		<appender-ref ref="file" />
+	</logger>
+	<root level="info">
+		<appender-ref ref="console" />
 	</root>
-
 </configuration>
